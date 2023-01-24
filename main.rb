@@ -7,6 +7,12 @@ sandwhichs.append('Turkey')
 sandwhichs.append('Salami')
 sandwhichs.prepend('Beef')
 
-p sandwhichs.print
+p sandwhichs.to_s
 
-p sandwhichs.at(6)
+sandwhichs.insert_at("Mote Cristo",4)
+
+p sandwhichs.to_s
+
+sandwhichs.remove_at(2)
+
+p sandwhichs.to_s
