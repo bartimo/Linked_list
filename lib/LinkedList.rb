@@ -10,12 +10,20 @@ class LinkedList
     @tail = @head
   end
 
-  def add(value)
+  def append(value)
     current_node = @tail
     new_node = Node.new(value)
     current_node.next_node = new_node
     new_node.previous_node = @tail
     @tail = new_node
+  end
+
+  def prepend(value)
+    current_node = @head
+    new_node = Node.new(value)
+    current_node.previous_node = new_node
+    new_node.next_node = @head
+    @head = new_node
   end
 
   def print()
@@ -28,5 +36,14 @@ class LinkedList
     end
     result = result + current_node.value
   end
+
+  def head
+    @head
+  end
+
+  def tail
+     @tail
+  end
+
 end
 
