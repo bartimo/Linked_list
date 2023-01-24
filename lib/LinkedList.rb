@@ -2,7 +2,6 @@ require './lib/Node'
 require 'pry-byebug'
 
 class LinkedList
-
   attr_reader :head, :tail
 
   def initialize(value = nil)
@@ -27,23 +26,22 @@ class LinkedList
   end
 
   def print()
-   # binding.pry
-    result = ""
+    result = ''
     current_node = @head
-    while current_node.next_node != nil
-      result = result + current_node.value + ' -> '
+    until current_node.next_node.nil?
+      result += "#{current_node.value} -> "
       current_node = current_node.next_node
     end
-    result = result + current_node.value
+    result + current_node.value
   end
 
-  def head
-    @head
+  def size
+    current_node = @head
+    count = 0
+    until current_node.next_node.nil?
+      count += 1
+      current_node = current_node.next_node
+    end
+    count + 1
   end
-
-  def tail
-     @tail
-  end
-
 end
-

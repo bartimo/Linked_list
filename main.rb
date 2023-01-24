@@ -9,4 +9,4 @@ sandwhichs.prepend('Beef')
 
 p sandwhichs.print
 
-p sandwhichs.head
+p sandwhichs.size
